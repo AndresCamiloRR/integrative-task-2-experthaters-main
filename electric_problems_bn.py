@@ -153,8 +153,7 @@ class DiagnosisElectrico(KnowledgeEngine):
         result = inference.query(
             variables=['ElectricalFailure'], evidence={'Alternator': 1})
         prob = result.values[1]
-        diagnosis_text += f" Probabilidad de falla en alternador (P={
-            prob:.2f})"
+        diagnosis_text += f" Probabilidad de falla en alternador (P={prob:.2f})"
         self.__add_diagnosis(diagnosis_text)
 
     @Rule(SintomaVehiculo(name='Wiring'))
@@ -172,8 +171,7 @@ class DiagnosisElectrico(KnowledgeEngine):
         result = inference.query(
             variables=['ElectricalFailure'], evidence={'Fuses': 1})
         prob = result.values[1]
-        diagnosis_text += f" Probabilidad de problema en fusibles (P={
-            prob:.2f})"
+        diagnosis_text += f" Probabilidad de problema en fusibles (P={prob:.2f})"
         self.__add_diagnosis(diagnosis_text)
 
     @Rule(SintomaVehiculo(name='HeadlightIssues') & SintomaVehiculo(name='Battery'))
@@ -191,8 +189,7 @@ class DiagnosisElectrico(KnowledgeEngine):
         result = inference.query(
             variables=['StartingIssues'], evidence={'Battery': 1})
         prob = result.values[1]
-        diagnosis_text += f" Probabilidad de problema en arranque (P={
-            prob:.2f})"
+        diagnosis_text += f" Probabilidad de problema en arranque (P={prob:.2f})"
         self.__add_diagnosis(diagnosis_text)
 
     @Rule(SintomaVehiculo(name='ElectricalFailure') & SintomaVehiculo(name='Battery') & SintomaVehiculo(name='Alternator'))
@@ -201,8 +198,7 @@ class DiagnosisElectrico(KnowledgeEngine):
         result = inference.query(variables=['ElectricalFailure'], evidence={
                                  'Battery': 1, 'Alternator': 1})
         prob = result.values[1]
-        diagnosis_text += f" Probabilidad de falla eléctrica total (P={
-            prob:.2f})"
+        diagnosis_text += f" Probabilidad de falla eléctrica total (P={prob:.2f})"
         self.__add_diagnosis(diagnosis_text)
 
     @Rule(SintomaVehiculo(name='HeadlightIssues') & SintomaVehiculo(name='Alternator'))
@@ -211,8 +207,7 @@ class DiagnosisElectrico(KnowledgeEngine):
         result = inference.query(
             variables=['HeadlightIssues'], evidence={'Alternator': 1})
         prob = result.values[1]
-        diagnosis_text += f" Probabilidad de problema en alternador (P={
-            prob:.2f})"
+        diagnosis_text += f" Probabilidad de problema en alternador (P={prob:.2f})"
         self.__add_diagnosis(diagnosis_text)
 
     @Rule(SintomaVehiculo(name='HeadlightIssues') & SintomaVehiculo(name='Fuses'))
@@ -221,8 +216,7 @@ class DiagnosisElectrico(KnowledgeEngine):
         result = inference.query(
             variables=['HeadlightIssues'], evidence={'Fuses': 1})
         prob = result.values[1]
-        diagnosis_text += f" Probabilidad de problema en fusibles (P={
-            prob:.2f})"
+        diagnosis_text += f" Probabilidad de problema en fusibles (P={prob:.2f})"
         self.__add_diagnosis(diagnosis_text)
 
     @Rule(SintomaVehiculo(name='StartingIssues') & SintomaVehiculo(name='Wiring'))
@@ -231,8 +225,7 @@ class DiagnosisElectrico(KnowledgeEngine):
         result = inference.query(
             variables=['StartingIssues'], evidence={'Wiring': 1})
         prob = result.values[1]
-        diagnosis_text += f" Probabilidad de problema en cableado (P={
-            prob:.2f})"
+        diagnosis_text += f" Probabilidad de problema en cableado (P={prob:.2f})"
         self.__add_diagnosis(diagnosis_text)
 
     @Rule(SintomaVehiculo(name='Battery') & SintomaVehiculo(name='Fuses'))
@@ -241,8 +234,7 @@ class DiagnosisElectrico(KnowledgeEngine):
         result = inference.query(variables=['ElectricalFailure'], evidence={
                                  'Battery': 1, 'Fuses': 1})
         prob = result.values[1]
-        diagnosis_text += f" Probabilidad de falla en batería y fusibles (P={
-            prob:.2f})"
+        diagnosis_text += f" Probabilidad de falla en batería y fusibles (P={prob:.2f})"
         self.__add_diagnosis(diagnosis_text)
 
     @Rule(SintomaVehiculo(name='ElectricalFailure') & SintomaVehiculo(name='Alternator'))
@@ -260,8 +252,7 @@ class DiagnosisElectrico(KnowledgeEngine):
         result = inference.query(
             variables=['HeadlightIssues'], evidence={'Wiring': 1})
         prob = result.values[1]
-        diagnosis_text += f" Probabilidad de problema en cableado (P={
-            prob:.2f})"
+        diagnosis_text += f" Probabilidad de problema en cableado (P={prob:.2f})"
         self.__add_diagnosis(diagnosis_text)
 
     @Rule(SintomaVehiculo(name='ElectricalFailure') & SintomaVehiculo(name='Fuses'))
@@ -270,8 +261,7 @@ class DiagnosisElectrico(KnowledgeEngine):
         result = inference.query(
             variables=['ElectricalFailure'], evidence={'Fuses': 1})
         prob = result.values[1]
-        diagnosis_text += f" Probabilidad de falla eléctrica por fusibles (P={
-            prob:.2f})"
+        diagnosis_text += f" Probabilidad de falla eléctrica por fusibles (P={prob:.2f})"
         self.__add_diagnosis(diagnosis_text)
 
     @Rule(SintomaVehiculo(name='Battery') & SintomaVehiculo(name='Alternator') & SintomaVehiculo(name='Wiring'))
