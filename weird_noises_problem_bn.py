@@ -307,8 +307,7 @@ class DiagnosisRuidos(KnowledgeEngine):
             evidence={'clunk_or_single_tick': 1, 'noisy_on_bombs': 1}
         )
         prob = result.values[1]
-        diagnosis_text += f" Probabilidad de problema de suspensión (P={
-            prob:.2f})"
+        diagnosis_text += f" Probabilidad de problema de suspensión (P={prob:.2f})"
         self.__add_diagnosis(diagnosis_text)
 
     @Rule(
@@ -322,8 +321,7 @@ class DiagnosisRuidos(KnowledgeEngine):
             evidence={'clunk_or_single_tick': 1}
         )
         prob = result.values[1]
-        diagnosis_text += f" Probabilidad de problema de dirección/soportes (P={
-            prob:.2f})"
+        diagnosis_text += f" Probabilidad de problema de dirección/soportes (P={prob:.2f})"
         self.__add_diagnosis(diagnosis_text)
 
     @Rule(
@@ -343,8 +341,7 @@ class DiagnosisRuidos(KnowledgeEngine):
             }
         )
         prob = result.values[1]
-        diagnosis_text += f" Probabilidad de problema del motor o escape (P={
-            prob:.2f})"
+        diagnosis_text += f" Probabilidad de problema del motor o escape (P={prob:.2f})"
         self.__add_diagnosis(diagnosis_text)
 
     @Rule(
@@ -357,8 +354,7 @@ class DiagnosisRuidos(KnowledgeEngine):
             evidence={'tick_neutral': 1}
         )
         prob = result.values[1]
-        diagnosis_text += f" Probabilidad de problema de transmisión (P={
-            prob:.2f})"
+        diagnosis_text += f" Probabilidad de problema de transmisión (P={prob:.2f})"
         self.__add_diagnosis(diagnosis_text)
 
     @Rule(
@@ -371,8 +367,7 @@ class DiagnosisRuidos(KnowledgeEngine):
             evidence={'tick_reverse': 1}
         )
         prob = result.values[1]
-        diagnosis_text += f" Probabilidad de problema en reversa (P={
-            prob:.2f})"
+        diagnosis_text += f" Probabilidad de problema en reversa (P={prob:.2f})"
         self.__add_diagnosis(diagnosis_text)
 
     @Rule(
@@ -399,8 +394,7 @@ class DiagnosisRuidos(KnowledgeEngine):
             evidence={'time_bomb_under_seat': 1}
         )
         prob = result.values[1]
-        diagnosis_text += f" Probabilidad de problema de rodamientos (P={
-            prob:.2f})"
+        diagnosis_text += f" Probabilidad de problema de rodamientos (P={prob:.2f})"
         self.__add_diagnosis(diagnosis_text)
 
     @Rule(
@@ -428,8 +422,7 @@ class DiagnosisRuidos(KnowledgeEngine):
             evidence={'inspect_tire_treads': 1, 'ticks_slow_speed': 1}
         )
         prob = result.values[1]
-        diagnosis_text += f" Probabilidad de problema en neumáticos (P={
-            prob:.2f})"
+        diagnosis_text += f" Probabilidad de problema en neumáticos (P={prob:.2f})"
         self.__add_diagnosis(diagnosis_text)
 
     @Rule(
@@ -442,8 +435,7 @@ class DiagnosisRuidos(KnowledgeEngine):
             evidence={'drops_on_shifts': 1}
         )
         prob = result.values[1]
-        diagnosis_text += f" Probabilidad de problema en transmisión (P={
-            prob:.2f})"
+        diagnosis_text += f" Probabilidad de problema en transmisión (P={prob:.2f})"
         self.__add_diagnosis(diagnosis_text)
 
     @Rule(
@@ -456,8 +448,7 @@ class DiagnosisRuidos(KnowledgeEngine):
             evidence={'removed_hubcaps': 1}
         )
         prob = result.values[1]
-        diagnosis_text += f" Probabilidad de problema con tapacubos (P={
-            prob:.2f})"
+        diagnosis_text += f" Probabilidad de problema con tapacubos (P={prob:.2f})"
         self.__add_diagnosis(diagnosis_text)
 
     @Rule(
@@ -470,8 +461,7 @@ class DiagnosisRuidos(KnowledgeEngine):
             evidence={'noisy_on_bombs': 1}
         )
         prob = result.values[1]
-        diagnosis_text += f" Probabilidad de problema de amortiguación (P={
-            prob:.2f})"
+        diagnosis_text += f" Probabilidad de problema de amortiguación (P={prob:.2f})"
         self.__add_diagnosis(diagnosis_text)
 
     @Rule(
@@ -515,8 +505,7 @@ class DiagnosisRuidos(KnowledgeEngine):
             evidence={'inspect_tire_treads': 1, 'ticks_on_turns': 1}
         )
         prob = result.values[1]
-        diagnosis_text += f" Probabilidad de problema de desgaste (P={
-            prob:.2f})"
+        diagnosis_text += f" Probabilidad de problema de desgaste (P={prob:.2f})"
         self.__add_diagnosis(diagnosis_text)
 
     @Rule(
@@ -530,8 +519,7 @@ class DiagnosisRuidos(KnowledgeEngine):
             evidence={'time_bomb_under_seat': 1, 'Only_ticks_when_moving': 1}
         )
         prob = result.values[1]
-        diagnosis_text += f" Probabilidad de falla en rodamiento (P={
-            prob:.2f})"
+        diagnosis_text += f" Probabilidad de falla en rodamiento (P={prob:.2f})"
         self.__add_diagnosis(diagnosis_text)
 
     @Rule(
@@ -575,8 +563,7 @@ class DiagnosisRuidos(KnowledgeEngine):
                       'noisy_on_bombs': 1, 'ticks_on_turns': 1}
         )
         prob = result.values[1]
-        diagnosis_text += f" Probabilidad de problemas múltiples (P={
-            prob:.2f})"
+        diagnosis_text += f" Probabilidad de problemas múltiples (P={prob:.2f})"
         self.__add_diagnosis(diagnosis_text)
 
     @Rule(
@@ -591,8 +578,7 @@ class DiagnosisRuidos(KnowledgeEngine):
             evidence={'changed_tires': 1, 'ticks_slow_speed': 1}
         )
         prob = result.values[1]
-        diagnosis_text += f" Probabilidad de problema de instalación (P={
-            prob:.2f})"
+        diagnosis_text += f" Probabilidad de problema de instalación (P={prob:.2f})"
         self.__add_diagnosis(diagnosis_text)
 
     @Rule(
@@ -606,8 +592,7 @@ class DiagnosisRuidos(KnowledgeEngine):
             evidence={'tick_reverse': 1, 'drops_on_shifts': 1}
         )
         prob = result.values[1]
-        diagnosis_text += f" Probabilidad de problema en reversa (P={
-            prob:.2f})"
+        diagnosis_text += f" Probabilidad de problema en reversa (P={prob:.2f})"
         self.__add_diagnosis(diagnosis_text)
 
     @Rule(
@@ -637,8 +622,7 @@ class DiagnosisRuidos(KnowledgeEngine):
             evidence={'clunk_or_single_tick': 1, 'Only_ticks_when_moving': 1}
         )
         prob = result.values[1]
-        diagnosis_text += f" Probabilidad de problema en componentes (P={
-            prob:.2f})"
+        diagnosis_text += f" Probabilidad de problema en componentes (P={prob:.2f})"
         self.__add_diagnosis(diagnosis_text)
 
     @Rule(
@@ -652,8 +636,7 @@ class DiagnosisRuidos(KnowledgeEngine):
             evidence={'removed_hubcaps': 1, 'ticks_on_turns': 1}
         )
         prob = result.values[1]
-        diagnosis_text += f" Probabilidad de problema en retenedores (P={
-            prob:.2f})"
+        diagnosis_text += f" Probabilidad de problema en retenedores (P={prob:.2f})"
         self.__add_diagnosis(diagnosis_text)
 
     @Rule(
@@ -699,8 +682,7 @@ class DiagnosisRuidos(KnowledgeEngine):
             evidence={'inspect_tire_treads': 1, 'changed_tires': 1}
         )
         prob = result.values[1]
-        diagnosis_text += f" Probabilidad de problema de balanceo (P={
-            prob:.2f})"
+        diagnosis_text += f" Probabilidad de problema de balanceo (P={prob:.2f})"
         self.__add_diagnosis(diagnosis_text)
 
     @Rule(
@@ -714,8 +696,7 @@ class DiagnosisRuidos(KnowledgeEngine):
             evidence={'noisy_on_bombs': 1, 'Only_ticks_when_moving': 1}
         )
         prob = result.values[1]
-        diagnosis_text += f" Probabilidad de problema en amortiguadores (P={
-            prob:.2f})"
+        diagnosis_text += f" Probabilidad de problema en amortiguadores (P={prob:.2f})"
         self.__add_diagnosis(diagnosis_text)
 
     @Rule(
@@ -745,8 +726,7 @@ class DiagnosisRuidos(KnowledgeEngine):
             evidence={'windshield_wipers_radio_off': 1, 'ticks_cold': 1}
         )
         prob = result.values[1]
-        diagnosis_text += f" Probabilidad de múltiples problemas (P={
-            prob:.2f})"
+        diagnosis_text += f" Probabilidad de múltiples problemas (P={prob:.2f})"
         self.__add_diagnosis(diagnosis_text)
 
     @Rule(
@@ -761,8 +741,7 @@ class DiagnosisRuidos(KnowledgeEngine):
             evidence={'time_bomb_under_seat': 1, 'ticks_on_turns': 1}
         )
         prob = result.values[1]
-        diagnosis_text += f" Probabilidad de problema en dirección (P={
-            prob:.2f})"
+        diagnosis_text += f" Probabilidad de problema en dirección (P={prob:.2f})"
         self.__add_diagnosis(diagnosis_text)
 
 
