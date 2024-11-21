@@ -16,7 +16,7 @@ def replace_file_contents(target_file_path, source_file_path):
         print("An error occurred while accessing the files.")
 
 # Fix the Experta library's __init__.py file
-replace_file_contents("./venv/Lib/site-packages/frozendict/__init__.py", "experta_fix_innit.py")
+replace_file_contents("/home/adminuser/venv/lib/python3.12/site-packages/frozendict/__init__.py", "experta_fix_innit.py")
 
 import streamlit as st
 from dotenv import load_dotenv
