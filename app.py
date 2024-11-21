@@ -1,14 +1,13 @@
 def replace_file_contents(target_file_path, source_file_path):
-    try:
-        # Read data from the source file
-        with open(source_file_path, 'r') as source_file:
-            data = source_file.read()
-        
-        # Write data to the target file, replacing its contents
-        with open(target_file_path, 'w') as target_file:
-            target_file.write(data)
-        
-        print(f"Contents of '{source_file_path}' successfully copied to '{target_file_path}'.")
+    # Read data from the source file
+    with open(source_file_path, 'r') as source_file:
+        data = source_file.read()
+    
+    # Write data to the target file, replacing its contents
+    with open(target_file_path, 'w') as target_file:
+        target_file.write(data)
+    
+    print(f"Contents of '{source_file_path}' successfully copied to '{target_file_path}'.")
 
 # Fix the Experta library's __init__.py file
 replace_file_contents("/home/adminuser/venv/lib/python3.12/site-packages/frozendict/__init__.py", "experta_fix_innit.py")
