@@ -1,3 +1,23 @@
+def replace_file_contents(target_file_path, source_file_path):
+    try:
+        # Read data from the source file
+        with open(source_file_path, 'r') as source_file:
+            data = source_file.read()
+        
+        # Write data to the target file, replacing its contents
+        with open(target_file_path, 'w') as target_file:
+            target_file.write(data)
+        
+        print(f"Contents of '{source_file_path}' successfully copied to '{target_file_path}'.")
+    
+    except FileNotFoundError:
+        print("One of the files was not found. Please check the file paths.")
+    except IOError:
+        print("An error occurred while accessing the files.")
+
+# Fix the Experta library's __init__.py file
+replace_file_contents("./venv/Lib/site-packages/frozendict/__init__.py", "experta_fix_innit.py")
+
 import streamlit as st
 from dotenv import load_dotenv
 import os
@@ -25,26 +45,6 @@ cursor = conn.cursor()
 
 # JWT secret key
 JWT_SECRET = os.getenv("JWT_SECRET")
-
-def replace_file_contents(target_file_path, source_file_path):
-    try:
-        # Read data from the source file
-        with open(source_file_path, 'r') as source_file:
-            data = source_file.read()
-        
-        # Write data to the target file, replacing its contents
-        with open(target_file_path, 'w') as target_file:
-            target_file.write(data)
-        
-        print(f"Contents of '{source_file_path}' successfully copied to '{target_file_path}'.")
-    
-    except FileNotFoundError:
-        print("One of the files was not found. Please check the file paths.")
-    except IOError:
-        print("An error occurred while accessing the files.")
-
-# Fix the Experta library's __init__.py file
-replace_file_contents("./venv/Lib/site-packages/frozendict/__init__.py", "experta_fix_innit.py")
 
 def hash_password(password):
     return bcrypt.hashpw(password.encode(), bcrypt.gensalt()).decode()
